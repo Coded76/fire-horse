@@ -719,13 +719,15 @@
     <script>
         // --- HALLUCINATION MODE TOGGLE ---
         const hallucinationToggle = document.getElementById('hallucinationToggle');
-        hallucinationToggle.addEventListener('change', function() {
-            if(this.checked) {
-                document.body.classList.add('hallucination-mode');
-            } else {
-                document.body.classList.remove('hallucination-mode');
-            }
-        });
+        if (hallucinationToggle) {
+            hallucinationToggle.addEventListener('change', function() {
+                if(this.checked) {
+                    document.body.classList.add('hallucination-mode');
+                } else {
+                    document.body.classList.remove('hallucination-mode');
+                }
+            });
+        }
 
         // --- LOADER LOGIC ---
         window.addEventListener('load', () => {
